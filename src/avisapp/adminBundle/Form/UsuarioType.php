@@ -14,6 +14,7 @@ class UsuarioType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+<<<<<<< HEAD
         
  
           
@@ -23,6 +24,12 @@ class UsuarioType extends AbstractType
             ->add('rol' , 'text' )
                 
                 
+=======
+        $builder
+            ->add('usuario')
+            ->add('contrasena')
+            ->add('rol')
+>>>>>>> a83850510a8c87da0f9ed2969c695f04cf8ff70c
         ;
     }
     

@@ -33,9 +33,12 @@ class UsuarioController extends Controller
      * Creates a new Usuario entity.
      *
      */
+<<<<<<< HEAD
     
     
     
+=======
+>>>>>>> a83850510a8c87da0f9ed2969c695f04cf8ff70c
     public function createAction(Request $request)
     {
         $entity = new Usuario();
@@ -50,8 +53,11 @@ class UsuarioController extends Controller
             return $this->redirect($this->generateUrl('usuario_show', array('id' => $entity->getId())));
         }
 
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> a83850510a8c87da0f9ed2969c695f04cf8ff70c
         return $this->render('avisappadminBundle:Usuario:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
