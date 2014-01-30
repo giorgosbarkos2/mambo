@@ -1,3 +1,15 @@
 avisappadmin_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: avisappadminBundle:Default:index }
+
+
+avisappadminBundle_usuario:
+        resource: "@avisappadminBundle/Resources/config/routing/usuario.yml"
+        prefix:   /usuario
+
+        
+avisappadminBundle_admin_slider:
+        resource: "@avisappadminBundle/Resources/config/routing/slider.yml"
+        prefix:   /admin/slider
+
+        

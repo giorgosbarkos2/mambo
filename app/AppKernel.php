@@ -5,14 +5,13 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
-<<<<<<< HEAD
-=======
+
     public function init()
     {
         date_default_timezone_set( 'America/Santiago' );
         parent::init();
     }
->>>>>>> 99449c960780b75affdc68f10762c8a5e1b9624d
+
     public function registerBundles()
     {
         $bundles = array(
@@ -24,12 +23,15 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-<<<<<<< HEAD
-=======
+
             new avisapp\adminBundle\avisappadminBundle(),
             new avisapp\paginasBundle\avisapppaginasBundle(),
->>>>>>> 99449c960780b75affdc68f10762c8a5e1b9624d
+        
+
         );
+        
+        
+        
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();

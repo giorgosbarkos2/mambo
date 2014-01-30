@@ -1,0 +1,30 @@
+admin_slider:
+    pattern:  /
+    defaults: { _controller: "avisappadminBundle:Slider:index" }
+
+admin_slider_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "avisappadminBundle:Slider:show" }
+
+admin_slider_new:
+    pattern:  /new
+    defaults: { _controller: "avisappadminBundle:Slider:new" }
+
+admin_slider_create:
+    pattern:  /create
+    defaults: { _controller: "avisappadminBundle:Slider:create" }
+    requirements: { _method: post }
+
+admin_slider_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "avisappadminBundle:Slider:edit" }
+
+admin_slider_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "avisappadminBundle:Slider:update" }
+    requirements: { _method: post|put }
+
+admin_slider_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "avisappadminBundle:Slider:delete" }
+    requirements: { _method: post|delete }
