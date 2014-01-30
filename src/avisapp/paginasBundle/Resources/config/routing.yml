@@ -1,0 +1,3 @@
+avisapppaginas_homepage:
+    pattern:  /home
+    defaults: { _controller: avisapppaginasBundle:Default:index }
