@@ -3,9 +3,13 @@
 /app/cache/*
 /app/config/parameters.yml
 /app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
 /build/
 /vendor/
 /bin/
-/composer.pha
+/composer.phar
+/web/uploadss/server/php/documentos/
+.DS_Store
+web/documentos/*
+
+
+
