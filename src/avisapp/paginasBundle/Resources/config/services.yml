@@ -1,0 +1,7 @@
+parameters:
+#    avisapppaginas.example.class: avisapp\paginasBundle\Example
+
+services:
+#    avisapppaginas.example:
+#        class: %avisapppaginas.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

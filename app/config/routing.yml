@@ -1,0 +1,8 @@
+avisapppaginas:
+    resource: "@avisapppaginasBundle/Resources/config/routing.yml"
+    prefix:   /
+
+avisappadmin:
+    resource: "@avisappadminBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{% block title %}AvisAPP - Previene en Comunidad{% endblock %}</title>
+        <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="Mediadiv Ltda." />
+        <link href="images/ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="images/ico/favicon.ico" rel="icon" type="image/x-icon">			
+
+
+	<link href="{{asset('bundles/avisapppaginas/assets/css/bootstrap.css')}}" rel="stylesheet">
+	<link href="{{asset('bundles/avisapppaginas/lib/uikit/css/uikit.min.css')}}" rel="stylesheet" />
+
+               <link href="{{asset('bundles/avisapppaginas/css/style.css')}}" rel="stylesheet">
+	<link href="{{asset('bundles/avisapppaginas/css/color-1.css')}}" rel="stylesheet">		
+                
+	<link href="{{asset('bundles/avisapppaginas/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">	
+                
+	<link href="{{asset('bundles/avisapppaginas/lib/jquery.bxslider/jquery.bxslider.css')}}" rel="stylesheet" />
+		
+	<link  href="{{asset('bundles/avisapppaginas/lib/codepen_IpGnA/css/style.css')}}" rel="stylesheet"/>
+	<script src="{{asset('bundles/avisapppaginas/lib/codepen_IpGnA/js/modernizr.js')}}"></script>		
+		
+	<script src="{{asset('bundles/avisapppaginas/js/jquery.min.js')}}"></script>
+	<script src="{{asset('bundles/avisapppaginas/js/jquery-migrate-1.0.0.js')}}"></script>	
+        
+        
+    </head>
+    
+    
+    
+    
+    <body>
+    
+        
+        
+  {% block body %} 
+            
+ 
+        
+ 
+ {% endblock %}
+        
+        
+        
+        
+        
+      	<script src="{{asset('bundles/avisapppaginas/assets/js/bootstrap.min.js')}}"></script>
+	
+	<script src="{{asset('bundles/avisapppaginas/lib/uikit/js/uikit.min.js')}}"></script>
+	
+	<!-- mailchimp -->
+	<script src="{{asset('bundles/avisapppaginas/lib/mcapi-simple-subscribe-jquery/js/mailing-list.js')}}"></script>
+	<!-- mailchimp -->
+	
+	<!-- Simple-Form -->
+	<script src="{{asset('bundles/avisapppaginas/lib/Simple-Form/validation.js')}}"></script>
+	<script src="{{asset('bundles/avisapppaginas/lib/Simple-Form/form.js')}}"></script>
+	<script src="{{asset('bundles/avisapppaginas/lib/Simple-Form/index.js')}}"></script>	
+	<!-- Simple-Form -->				
+			
+	<script src="{{asset('bundles/avisapppaginas/lib/scrollToTop/jquery.scrollToTop.min.js')}}"></script>			
+	
+	<script src="{{asset('bundles/avisapppaginas/lib/jQuery-One-Page-Nav/jquery.scrollTo.js')}}"></script>
+	<script src="{{asset('bundles/avisapppaginas/lib/jQuery-One-Page-Nav/jquery.nav.js')}}"></script>
+			
+	<script src="{{asset('bundles/avisapppaginas/lib/jquery-parallax/scripts/jquery.parallax-1.1.3.js')}}"></script>	
+
+	<script src="{{asset('bundles/avisapppaginas/lib/jquery.bxslider/jquery.bxslider.min.js')}}"></script>
+	
+	<script src="{{asset('bundles/avisapppaginas/lib/mixitup/jquery.mixitup.min.js')}}"></script>	
+	
+	<script src="{{asset('bundles/avisapppaginas/lib/jQuery-Knob/js/jquery.knob.js')}}"></script>
+	
+	<script src="{{asset('bundles/avisapppaginas/lib/codepen_IpGnA/js/index.js')}}"></script>
+        
+        
+	
+	<script type="text/javascript">
+	
+	(function () {
+		"use strict";	
+		
+		/*global jQuery */	
+	
+		jQuery(document).ready(function(){	
+
+			jQuery('.bxslider').bxSlider({
+				auto: true,
+				controls:false,
+				mode:'fade',
+				pager:true
+			});	
+			
+			jQuery('.testimonial_bxslider').bxSlider({
+				auto: true,
+				controls:false,
+				mode:'fade',
+				slideMargin: 40	
+			});	
+
+			jQuery('.featured_bxslider').bxSlider({
+				auto: true,
+				controls:true,
+				mode:'horizontal',
+				pager:false
+			});			
+			
+			jQuery('.top_wrapper').parallax("50%", 0.4);
+			jQuery('.bg1').parallax("50%", 0.2);
+			jQuery('.bg2').parallax("50%", 0.2);
+			jQuery('.bg3').parallax("50%", 0.2);	
+			jQuery('.bg4').parallax("50%", 0.1);	
+			jQuery('.bg5').parallax("50%", 0.1);	
+			
+			jQuery('.nav').onePageNav();
+			
+			jQuery('#nav-wrapper').height(jQuery("#nav").height());
+			
+			jQuery('#nav').affix({
+				offset: { top: jQuery('#nav').offset().top }
+			});			
+			
+			//jQuery(function() {
+			//	jQuery("#toTop").scrollToTop(1000);
+			//});			
+			
+			jQuery('#Grid').mixitup();	
+			
+			jQuery(".dial").knob({
+				readOnly: true,
+				fgColor: "#979CA2",
+				bgColor: "#fff",
+				thickness: 0.15,
+				width:150
+			});	
+			
+		});
+	
+	}());	
+	</script>
+        
+        
+        
+    </body>
+</html>

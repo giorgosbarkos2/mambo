@@ -1,0 +1,50 @@
+
+.top{
+	/* background-color: rgba(81,184,183,0.8); */
+	/* background:url(../images/pattern/pattern.png) repeat; */
+	/* background: rgba(81,184,183,0.7) url(../images/pattern/pattern.png) repeat; */
+	/* background: rgba(255, 255, 255, 0.1); */
+	/* background: rgba(0, 0, 0, 0.8); */
+}
+
+.purchase_button{
+	background: #0CF;
+}
+
+#about .col-md-3:hover  .fa{
+	color:#DE2168;
+}
+
+.bgColor{
+	/* background: rgba(222,33,104,.9); */
+	/* background: rgba(151,156,162,.9); */
+	background: rgba(0, 0, 0, 0.8);
+	padding:110px 0;	
+}
+
+.team-social .fa:hover{
+	color:#DE2168;
+}
+
+.team-social ul li a:hover{
+	background:#fff;
+	border:1px #DE2168 solid;
+}
+
+.flat .plan.featured:hover li.plan-name {
+	background: #DE2168;
+}
+.flat .plan:hover li.plan-name {
+	background: #DE2168;
+}
+
+.button{
+	/* background-color:#B8255C; */
+	background-color: #0CF;
+}
+
+.social .fa:hover{
+	color:#DE2168;
+	border:2px solid #DE2168;
+	text-decoration:none;
+}

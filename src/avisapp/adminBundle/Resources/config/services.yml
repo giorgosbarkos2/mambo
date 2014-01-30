@@ -1,0 +1,7 @@
+parameters:
+#    avisappadmin.example.class: avisapp\adminBundle\Example
+
+services:
+#    avisappadmin.example:
+#        class: %avisappadmin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
