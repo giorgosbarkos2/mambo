@@ -1,3 +1,12 @@
 avisappadmin_homepage:
-    pattern:  /hello/{name}
+    pattern:  /Admin
     defaults: { _controller: avisappadminBundle:Default:index }
+    
+vistaPrincipal:
+    pattern: /Admin/vistaPrincipal
+    defaults: {_controller: avisappadminBundle:Default:vistaPrincipal}
+
+avisappadminBundle_usuario:
+        resource: "@avisappadminBundle/Resources/config/routing/usuario.yml"
+        prefix:   /usuario
+
