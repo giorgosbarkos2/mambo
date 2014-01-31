@@ -19,6 +19,8 @@ class SliderType extends AbstractType
         ;
     }
     
+    
+    
     /**
      * @param OptionsResolverInterface $resolver
      */
