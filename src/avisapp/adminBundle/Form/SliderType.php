@@ -15,8 +15,7 @@ class SliderType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('texto')
-        ;
+            ->add('texto', 'text', array('label' => 'Ingrese texto Slider:' , 'attr' => array('class' => 'form-control') , 'label_attr' => array(  'class' => 'col-sm-2 control-label')));
     }
     
     

@@ -1,15 +1,10 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>Slider creation</h1>
-
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Agregar Slider {% endblock%}
+{% block padre %}<a href="{{path('admin_slider')}}">Listar Slider</a>{% endblock %}
+{% block hijo %} Agregar Slider {%endblock%}
+{% block titulo %} Agregar Slider {%endblock %}
+{% block contenido %}
+<div class="horizontal-form">
     {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('admin_slider') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+</div>
 {% endblock %}
