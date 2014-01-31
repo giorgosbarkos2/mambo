@@ -1,15 +1,18 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>Usuario creation</h1>
-
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Agregar Usuario {% endblock%}
+{% block padre %}<a href="{{path('usuario')}}">Listar Usuarios</a>{% endblock %}
+{% block hijo %} Agregar Usuario {%endblock%}
+{% block titulo %} Agregar Usuario {%endblock %}
+{% block contenido %}
     {{ form(form) }}
-
+    {#{{ path('usuario') }}#}
+<!--
         <ul class="record_actions">
     <li>
-        <a href="{{ path('usuario') }}">
+        <a href="">
             Back to the list
         </a>
     </li>
 </ul>
+-->
 {% endblock %}

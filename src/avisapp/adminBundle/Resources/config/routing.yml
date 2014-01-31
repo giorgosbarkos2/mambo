@@ -1,25 +1,18 @@
 avisappadmin_homepage:
-    pattern:  /Admin
+    pattern:  /admin
     defaults: { _controller: avisappadminBundle:Default:index }
-<<<<<<< HEAD
 
-=======
-    
 vistaPrincipal:
-    pattern: /Admin/vistaPrincipal
+    pattern: /admin/vistaPrincipal
     defaults: {_controller: avisappadminBundle:Default:vistaPrincipal}
->>>>>>> a83850510a8c87da0f9ed2969c695f04cf8ff70c
+
 
 avisappadminBundle_usuario:
         resource: "@avisappadminBundle/Resources/config/routing/usuario.yml"
-        prefix:   /usuario
+        prefix:   /admin/usuario
 
-<<<<<<< HEAD
         
 avisappadminBundle_admin_slider:
         resource: "@avisappadminBundle/Resources/config/routing/slider.yml"
         prefix:   /admin/slider
 
-        
-=======
->>>>>>> a83850510a8c87da0f9ed2969c695f04cf8ff70c

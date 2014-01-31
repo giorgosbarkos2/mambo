@@ -14,22 +14,10 @@ class UsuarioType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-<<<<<<< HEAD
-        
- 
-          
         $builder
-            ->add('usuario' , 'text' , array('label' => 'nombre Usuario' , 'attr' => array('class' => 'caca' , 'id' => 'caca2')))
-            ->add('contrasena' , 'text')
-            ->add('rol' , 'text' )
-                
-                
-=======
-        $builder
-            ->add('usuario')
-            ->add('contrasena')
-            ->add('rol')
->>>>>>> a83850510a8c87da0f9ed2969c695f04cf8ff70c
+            ->add('usuario' , 'text' , array('label' => 'Nombre usuario:' , 'attr' => array('class' => 'form-control')))
+            ->add('contrasena' , 'text', array('label' => 'Ingrese contraseña:', 'attr' => array('class' => 'form-control')))
+            ->add('rol' , 'text', array('label' => 'Ingrese rol de usuario:', 'attr' => array('class' => 'form-control')))
         ;
     }
     
