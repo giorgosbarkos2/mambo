@@ -127,24 +127,12 @@
 			</div>					
 			<div class="row">
 				<div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
-					<i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/01.png')}}"></i>	
-					<h4>Registro Login</h4>
-					<p>Podrás registrarte y generar un usuario único, asociado a un nickname personal que será como te verán los otros usuarios de AvisAPP.</p>					
-				</div>
-				<div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}">
-					<i class="fa fa-check"><img src="{{asset('bundles/avisapppaginas/images/icons/02.png')}}"></i>	
-					<h4>Recibir avisos en el mapa</h4>
-					<p>Podrás ver los avisos como íconos en el mapa, y abrir aquellos dentro de tu ubicación actual para leer su mensaje así como sus comentarios.</p>					
-				</div>		
-				<div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:600}">
-					<i class="fa fa-exchange"><img src="{{asset('bundles/avisapppaginas/images/icons/03.png')}}"></i>	
-					<h4>Emitir avisos</h4>
-					<p>Podrás emitir avisos georeferenciados sobre algún suceso que consideres importante para otros usuarios que pasen cerca del lugar.</p>					
-				</div>
-				<div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:800}">
-					<i class="fa fa-cogs"><img src="{{asset('bundles/avisapppaginas/images/icons/03.png')}}images/icons/04.png"></i>	
-					<h4>Revisar Historial con tus preferencias.</h4>
-					<p>Podrás revisar  en el historial de tu ubicación actual todos los sucesos que se hayan  realizado cerca tuyo, así como agregar otras comunidades, y enterarte de  lo que ocurre cerca de ahí.</p>					
+                                    {% for caluga in caluga %}
+                                        {# asset('bundles/avisapppaginas/images/icons/01.png') #}
+					<i class="fa fa-edit"><img src="../../avisapppaginas/images/icons/{{caluga.foto}}"></i>	
+					<h4>{{caluga.titulo}}</h4>
+					<p>{{caluga.descripion}}</p>					
+                                     {% endfor %}   
 				</div>
 			</div>
 		</div>

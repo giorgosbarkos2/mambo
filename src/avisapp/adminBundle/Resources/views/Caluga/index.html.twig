@@ -1,0 +1,31 @@
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Listar Caluga {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga_new')}}">Crear Caluga</a>{% endblock %}
+{% block hijo %} Listar Caluga {%endblock%}
+{% block titulo %} Listar Caluga {%endblock %}
+{% block contenido %}
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Foto</th>
+                <th>Ver</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.titulo }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>
+                    <img src="../../web/bundles/avisapppaginas/images/icons/{{ entity.foto }}" alt="">
+                
+                </td>
+                <td><a href="{{ path('admin_caluga_show', { 'id': entity.id }) }}" class="btn btn-success">Ver</a></td>
+                <td><a href="{{ path('admin_caluga_edit', { 'id': entity.id }) }}" class="btn btn-primary">Editar</a></td>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

@@ -16,3 +16,8 @@ avisappadminBundle_admin_slider:
         resource: "@avisappadminBundle/Resources/config/routing/slider.yml"
         prefix:   /admin/slider
 
+avisappadminBundle_admin_caluga:
+        resource: "@avisappadminBundle/Resources/config/routing/caluga.yml"
+        prefix:   /admin/caluga
+
+

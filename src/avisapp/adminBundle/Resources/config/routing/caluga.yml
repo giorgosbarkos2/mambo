@@ -1,0 +1,30 @@
+admin_caluga:
+    pattern:  /
+    defaults: { _controller: "avisappadminBundle:Caluga:index" }
+
+admin_caluga_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "avisappadminBundle:Caluga:show" }
+
+admin_caluga_new:
+    pattern:  /new
+    defaults: { _controller: "avisappadminBundle:Caluga:new" }
+
+admin_caluga_create:
+    pattern:  /create
+    defaults: { _controller: "avisappadminBundle:Caluga:create" }
+    requirements: { _method: post }
+
+admin_caluga_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "avisappadminBundle:Caluga:edit" }
+
+admin_caluga_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "avisappadminBundle:Caluga:update" }
+    requirements: { _method: post|put }
+
+admin_caluga_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "avisappadminBundle:Caluga:delete" }
+    requirements: { _method: post|delete }

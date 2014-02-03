@@ -1,0 +1,29 @@
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Ver Caluga {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga')}}">Listar Calugas</a>{% endblock %}
+{% block hijo %} Ver Caluga {%endblock%}
+{% block titulo %} Ver Caluga {%endblock %}
+{% block contenido %}
+<div class="horizontal-form" rol="form">
+     <div class="form-group">
+         <label for="titulo" class="col-sm-2 control-label">Título:</label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ entity.titulo }}</span>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+         <label for="descripcion" class="col-sm-2 control-label">Descripción:</label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ entity.descripcion }}</span>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+               {{ form(delete_form) }}
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
