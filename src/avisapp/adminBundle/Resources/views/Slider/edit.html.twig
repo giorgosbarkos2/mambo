@@ -1,11 +1,23 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
-{% block title%} Listar Slider {% endblock%}
-{% block padre %}<a href="{{path('admin_slider_new')}}">Crear Slider</a>{% endblock %}
-{% block hijo %} Listar Slider {%endblock%}
-{% block titulo %} Listar Slider {%endblock %}
+{% block title%} Editar Slider {% endblock%}
+{% block padre %}<a href="{{path('admin_slider')}}">Listar Slider</a>{% endblock %}
+{% block hijo %} Editar Slider {%endblock%}
+{% block titulo %} Editar Slider {%endblock %}
 {% block contenido %}
-    {{ form(edit_form) }}
-    <br/>
-    {{ form(delete_form) }}
-</ul>
+    {{ form_start(edit_form)}}
+    <div class="form-group">
+        {{form_label(edit_form.texto, 'Su Texto : ', {'label_attr': {'class': 'col-sm-2 control-label'}})}}
+        <div class="col-sm-10">
+            {{form_widget(edit_form.texto, {'attr': {'class': 'form-control'}})}}
+        </div>
+    </div>
+    <br />
+    <br />
+        <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+             {{form_widget(edit_form.submit,{'label': 'Guardar Editar'}, {'attr': {'class': 'btn btn-primary'}})}} {{ form(delete_form) }}
+             
+        </div>
+    </div>
+    {{ form_start(edit_form)}}
 {% endblock %}

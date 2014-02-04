@@ -2,6 +2,7 @@
 {# empty Twig template #}
 
 <div class="cl-sidebar">
+<<<<<<< HEAD
     <div class="cl-toggle"><i class="fa fa-bars"></i></div>
     <div class="cl-navblock">
         <ul class="cl-vnavigation">
@@ -63,5 +64,64 @@
 
             <!-- fin crud texto que es -->
         </ul>
+=======
+     <div class="cl-toggle"><i class="fa fa-bars"></i></div>
+     <div class="cl-navblock">
+       <ul class="cl-vnavigation">
+         <li><a href="{{path('vistaPrincipal')}}"><i class="fa fa-home"></i>Principal</a></li>
+    
+         <!-- Crud Usuario -->
+         <li><a href="#"><i class="fa fa-list-alt"></i>Usuarios </a>
+           <ul class="sub-menu">
+               
+                             
+             <li><a href="{{path('usuario_new')}}">Agregar Usuario</a></li>
+             <li><a href="#">Listar Usuarios / Editar /  Eliminar</a></li>
+ 
+             
+           </ul>
+         </li>
+         <!-- Crud Usuario -->
+         
+         <!-- Crud Slider -->
+         
+         <li><a href="#"><i class="fa fa-list-alt"></i>Slider</a>
+           <ul class="sub-menu">
+               
+                             
+             <li><a href="{{path('admin_slider_new')}}">Agregar Slider</a></li>
+             <li><a href="{{path('admin_slider')}}">Listar Slider / Editar /  Eliminar</a></li>
+ 
+             
+           </ul>
+         </li>
+         <!-- Crud Slider -->
+         <!-- Crud Caluga -->
+        <li><a href="#"><i class="fa fa-list-alt"></i>Caluga</a>
+           <ul class="sub-menu">
+               
+                             
+             <li><a href="{{path('admin_caluga_new')}}">Agregar Caluga</a></li>
+             <li><a href="{{path('admin_caluga')}}">Listar Caluga / Editar /  Eliminar</a></li>
+ 
+             
+           </ul>
+         </li>
+        <!-- Crud Caluga -->
+        <!-- Crud Caluga Beneficio -->
+        <li><a href="#"><i class="fa fa-list-alt"></i>Caluga Beneficio</a>
+           <ul class="sub-menu">
+               
+                             
+             <li><a href="{{path('admin_calugabeneficio_new')}}">Agregar Caluga Beneficio</a></li>
+             <li><a href="{{path('admin_calugabeneficio')}}">Listar Caluga Beneficio / Editar /  Eliminar</a></li>
+ 
+             
+           </ul>
+         </li>
+         <!-- Crud Caluga Beneficio -->
+         
+       </ul>
+>>>>>>> 2590f735d0d83ca98bd2ca03fbac7e97f0af4c9f
     </div>
 </div>

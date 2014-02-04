@@ -32,3 +32,6 @@ login:
 
   
 
+avisappadminBundle_admin_calugabeneficio:
+        resource: "@avisappadminBundle/Resources/config/routing/calugabeneficio.yml"
+        prefix:   /admin/calugabeneficio

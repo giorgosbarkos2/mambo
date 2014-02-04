@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class SliderType extends AbstractType
+class calugaBeneficioType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -15,10 +15,10 @@ class SliderType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('texto');
+            ->add('titulo')
+            ->add('descripcion')
+        ;
     }
-    
-    
     
     /**
      * @param OptionsResolverInterface $resolver
@@ -26,7 +26,7 @@ class SliderType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'avisapp\adminBundle\Entity\Slider'
+            'data_class' => 'avisapp\adminBundle\Entity\calugaBeneficio'
         ));
     }
 
@@ -35,6 +35,6 @@ class SliderType extends AbstractType
      */
     public function getName()
     {
-        return 'avisapp_adminbundle_slider';
+        return 'avisapp_adminbundle_calugabeneficio';
     }
 }
