@@ -25,3 +25,6 @@ avisappadminBundle_admin_textoquees:
         resource: "@avisappadminBundle/Resources/config/routing/textoquees.yml"
         prefix:   /admin/textoquees
 
+avisappadminBundle_admin_calugabeneficio:
+        resource: "@avisappadminBundle/Resources/config/routing/calugabeneficio.yml"
+        prefix:   /admin/calugabeneficio

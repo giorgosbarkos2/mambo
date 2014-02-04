@@ -1,32 +1,21 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>Slider</h1>
-
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Texto</th>
-                <td>{{ entity.texto }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('admin_slider') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('admin_slider_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Ver Slider {% endblock%}
+{% block padre %}<a href="{{path('admin_slider')}}">Listar Slider</a>{% endblock %}
+{% block hijo %} Ver Slider {%endblock%}
+{% block titulo %} Ver Slider {%endblock %}
+{% block contenido %}
+ <div class="horizontal-form" rol="form">
+     <div class="form-group">
+         <label for="texto" class="col-sm-2 control-label">Título Slider:</label>
+        <div class="col-sm-10">
+            <span name="texto" class="form-control">{{ entity.texto }}</span>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="col-sm-offset-2 col-sm-10">
+               {{ form(delete_form) }}
+        </div>
+    </div>
+</div>
 {% endblock %}

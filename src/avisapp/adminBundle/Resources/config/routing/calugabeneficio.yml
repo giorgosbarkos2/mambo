@@ -1,0 +1,30 @@
+admin_calugabeneficio:
+    pattern:  /
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:index" }
+
+admin_calugabeneficio_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:show" }
+
+admin_calugabeneficio_new:
+    pattern:  /new
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:new" }
+
+admin_calugabeneficio_create:
+    pattern:  /create
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:create" }
+    requirements: { _method: post }
+
+admin_calugabeneficio_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:edit" }
+
+admin_calugabeneficio_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:update" }
+    requirements: { _method: post|put }
+
+admin_calugabeneficio_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "avisappadminBundle:calugaBeneficio:delete" }
+    requirements: { _method: post|delete }
