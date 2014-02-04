@@ -25,8 +25,13 @@ class calugaBeneficioController extends Controller
 
         $entities = $em->getRepository('avisappadminBundle:calugaBeneficio')->findAll();
 
+        foreach ($entities as $entity) {
+            $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
+        }
+        
         return $this->render('avisappadminBundle:calugaBeneficio:index.html.twig', array(
             'entities' => $entities,
+            'deleteForms' => $deleteForms,
         ));
     }
     /**
@@ -216,7 +221,7 @@ class calugaBeneficioController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('admin_calugabeneficio_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Eliminar', 'attr' => array('class' => 'btn  btn-danger')))
             ->getForm()
         ;
     }

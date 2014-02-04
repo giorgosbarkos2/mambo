@@ -1,4 +1,28 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+<<<<<<< HEAD
+{% block title%} Crear, Texto Que es? {% endblock%}
+{% block padre %}<a href="{{path('admin_textoquees')}}">Listar, Texto Que es?</a>{% endblock %}
+{% block hijo %} Crear, Texto Que es? {%endblock%}
+{% block titulo %} Crear, Texto Que es? {%endblock %}
+{% block contenido %}
+<div class="horizontal-form" rol="form">
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.texto, 'Texto Slider: ', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
+        <div class="col-sm-10">
+            {{ form_widget(form.texto, {'attr' : { 'class' : 'form-control'}})}}
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+             {{form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}})}} 
+        </div>
+        </div>
+    {{ form_end(form) }}
+</div>
+=======
 {% block title%} Nuevo Texto Que es {% endblock%}
 {% block padre %}<a href="{{path('admin_caluga')}}">Listar Textos</a>{% endblock %}
 {% block hijo %} Nuevo Texto Que es  {%endblock%}
@@ -34,4 +58,5 @@
         </a>
     </li>
 </ul>
+>>>>>>> 0e246a116a9cc13d6500ad10b3d453fca7d9b9dc
 {% endblock %}

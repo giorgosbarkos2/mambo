@@ -15,7 +15,11 @@ class TextoQueesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+<<<<<<< HEAD
+            ->add('texto', 'textarea')
+=======
             ->add('texto' , 'textarea')
+>>>>>>> 0e246a116a9cc13d6500ad10b3d453fca7d9b9dc
         ;
     }
     

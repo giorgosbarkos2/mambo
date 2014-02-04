@@ -24,9 +24,14 @@ class SliderController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('avisappadminBundle:Slider')->findAll();
+        
+        foreach ($entities as $entity) {
+            $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
+        }
 
         return $this->render('avisappadminBundle:Slider:index.html.twig', array(
             'entities' => $entities,
+            'deleteForms' => $deleteForms,
         ));
     }
     /**
@@ -128,7 +133,7 @@ class SliderController extends Controller
         return $this->render('avisappadminBundle:Slider:edit.html.twig', array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            
         ));
     }
 
@@ -216,7 +221,7 @@ class SliderController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('admin_slider_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Eliminar', 'attr' => array('class' => 'btn  btn-danger')))
+            ->add('submit', 'submit', array('label' => 'Eliminar Slider', 'attr' => array('class' => 'btn  btn-danger')))
             ->getForm()
         ;
     }
