@@ -1,4 +1,5 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+<<<<<<< HEAD
 {% block title%} Crear, Texto Que es? {% endblock%}
 {% block padre %}<a href="{{path('admin_textoquees')}}">Listar, Texto Que es?</a>{% endblock %}
 {% block hijo %} Crear, Texto Que es? {%endblock%}
@@ -21,4 +22,41 @@
         </div>
     {{ form_end(form) }}
 </div>
+=======
+{% block title%} Nuevo Texto Que es {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga')}}">Listar Textos</a>{% endblock %}
+{% block hijo %} Nuevo Texto Que es  {%endblock%}
+{% block titulo %} Nuevo Texto Que es {%endblock %}
+{% block contenido %}
+
+
+    <h1>Ingrese texto</h1>
+
+
+        {{ form_start(form) }}
+    
+    
+       <div class="form-group">
+           <p style="margin-left: -1%;">  {{ form_label(form.texto, 'Ingrese un texto:', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}</p>
+   
+            {{ form_widget(form.texto, {'attr' : { 'class' : 'form-control'}})}}
+ 
+        </div>
+    
+    
+    
+    
+       {{ form_end(form) }}
+    
+    
+    
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('admin_textoquees') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+>>>>>>> 0e246a116a9cc13d6500ad10b3d453fca7d9b9dc
 {% endblock %}

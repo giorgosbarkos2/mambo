@@ -1,6 +1,11 @@
-{% extends '::base.html.twig' %}
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Ver Caluga {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga')}}">Listar Calugas</a>{% endblock %}
+{% block hijo %} Ver Caluga {%endblock%}
+{% block titulo %} Ver Caluga {%endblock %}
+{% block contenido %}
 
-{% block body -%}
+
     <h1>TextoQuees</h1>
 
     <table class="record_properties">

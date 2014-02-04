@@ -1,4 +1,5 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+<<<<<<< HEAD
 {% block title%} Editar, Texto Que es? {% endblock%}
 {% block padre %}<a href="{{path('admin_textoquees')}}">Listar Texto Que es?</a>{% endblock %}
 {% block hijo %} Editar, Texto Que es? {%endblock%}
@@ -19,4 +20,32 @@
         </div>
     </div>
     {{ form_start(edit_form)}}
+=======
+{% block title%} Editar Que es {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga')}}">Listar Calugas</a>{% endblock %}
+{% block hijo %} Editar Caluga {%endblock%}
+{% block titulo %} Editar Caluga {%endblock %}
+{% block contenido %}
+
+sadasdasdasdads
+
+
+
+    <h1>TextoQuees edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('admin_textoquees') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+
+
+>>>>>>> 0e246a116a9cc13d6500ad10b3d453fca7d9b9dc
 {% endblock %}
+
+
