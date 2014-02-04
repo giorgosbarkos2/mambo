@@ -9,7 +9,7 @@
             <tr>
             
                 <th>Texto</th>
-                <th>Ver</th>
+                <th>Eliminar</th>
                 <th>Editar</th>
             </tr>
         </thead>
@@ -17,7 +17,12 @@
         {% for entity in entities %}
             <tr>
                 <td>{{ entity.texto }}</td>
-                <td><a href="{{ path('admin_slider_show', { 'id': entity.id }) }}" class="btn btn-success">Ver</a></td>
+                <td>
+                    <form action="{{ path('admin_slider_delete', { 'id': entity.id }) }}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        {{ form_widget(deleteForms[entity.id]) }}
+                    </form>
+                </td>
                 <td><a href="{{ path('admin_slider_edit', { 'id': entity.id }) }}" class="btn btn-primary">Editar</a></td>
             </tr>
         {% endfor %}

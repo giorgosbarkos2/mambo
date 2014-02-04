@@ -18,7 +18,12 @@
             <tr>
                 <td>{{ entity.titulo }}</td>
                 <td>{{ entity.descripcion }}</td>
-                <td><a href="{{ path('admin_calugabeneficio_show', { 'id': entity.id }) }}" class="btn btn-success">Ver</a></td>
+                <td>
+                    <form action="{{ path('admin_calugabeneficio_delete', { 'id': entity.id }) }}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        {{ form_widget(deleteForms[entity.id]) }}
+                    </form>
+                </td>
                 <td><a href="{{ path('admin_calugabeneficio_edit', { 'id': entity.id }) }}" class="btn btn-primary" >Editar</a></td>
         {% endfor %}
         </tbody>

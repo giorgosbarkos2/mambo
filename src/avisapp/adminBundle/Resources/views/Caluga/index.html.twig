@@ -10,7 +10,7 @@
                 <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>Foto</th>
-                <th>Ver</th>
+                <th>Eliminar</th>
                 <th>Editar</th>
             </tr>
         </thead>
@@ -23,7 +23,12 @@
                     <img src="../../web/bundles/avisapppaginas/images/icons/{{ entity.foto }}" alt="">
                 
                 </td>
-                <td><a href="{{ path('admin_caluga_show', { 'id': entity.id }) }}" class="btn btn-success">Ver</a></td>
+                <td>
+                    <form action="{{ path('admin_caluga_delete', { 'id': entity.id }) }}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        {{ form_widget(deleteForms[entity.id]) }}
+                    </form>
+                </td>
                 <td><a href="{{ path('admin_caluga_edit', { 'id': entity.id }) }}" class="btn btn-primary">Editar</a></td>
         {% endfor %}
         </tbody>
