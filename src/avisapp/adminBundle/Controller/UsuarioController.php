@@ -185,6 +185,8 @@ class UsuarioController extends Controller
      * Deletes a Usuario entity.
      *
      */
+    
+    
     public function deleteAction(Request $request, $id)
     {
         $form = $this->createDeleteForm($id);
@@ -212,6 +214,9 @@ class UsuarioController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
+    
+    
+ 
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()

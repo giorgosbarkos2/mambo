@@ -24,4 +24,11 @@ avisappadminBundle_admin_caluga:
 avisappadminBundle_admin_textoquees:
         resource: "@avisappadminBundle/Resources/config/routing/textoquees.yml"
         prefix:   /admin/textoquees
+        
+        
+login:
+   pattern:  /admin/login
+   defaults: { _controller: avisappadminBundle:Default:login }
+
+  
 

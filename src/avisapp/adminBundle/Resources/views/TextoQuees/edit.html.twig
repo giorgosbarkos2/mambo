@@ -1,6 +1,14 @@
-{% extends '::base.html.twig' %}
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Editar Que es {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga')}}">Listar Calugas</a>{% endblock %}
+{% block hijo %} Editar Caluga {%endblock%}
+{% block titulo %} Editar Caluga {%endblock %}
+{% block contenido %}
 
-{% block body -%}
+sadasdasdasdads
+
+
+
     <h1>TextoQuees edit</h1>
 
     {{ form(edit_form) }}
@@ -13,4 +21,8 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+
+
 {% endblock %}
+
+
