@@ -1,36 +1,29 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>calugaBeneficio</h1>
-
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Titulo</th>
-                <td>{{ entity.titulo }}</td>
-            </tr>
-            <tr>
-                <th>Descripcion</th>
-                <td>{{ entity.descripcion }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('admin_calugabeneficio') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('admin_calugabeneficio_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Ver Caluga Beneficio{% endblock%}
+{% block padre %}<a href="{{path('admin_calugabeneficio')}}">Listar Calugas Beneficio</a>{% endblock %}
+{% block hijo %} Ver Caluga Beneficio {%endblock%}
+{% block titulo %} Ver Caluga Beneficio {%endblock %}
+{% block contenido %}
+<div class="horizontal-form" rol="form">
+     <div class="form-group">
+         <label for="titulo" class="col-sm-2 control-label">Título:</label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ entity.titulo }}</span>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+         <label for="descripcion" class="col-sm-2 control-label">Descripción:</label>
+        <div class="col-sm-10">
+            <span class="form-control">{{ entity.descripcion }}</span>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+               {{ form(delete_form) }}
+        </div>
+    </div>
+    
+</div>
 {% endblock %}
