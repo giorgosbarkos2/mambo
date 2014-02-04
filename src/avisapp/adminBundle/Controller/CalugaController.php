@@ -25,14 +25,34 @@ class CalugaController extends Controller
 
         $entities = $em->getRepository('avisappadminBundle:Caluga')->findAll();
         
+        $cont = 0;
+        
         foreach ($entities as $entity) {
+            $cont++;
             $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
         }
-
+            
+        
+        if($cont > 0){
+            
+    
         return $this->render('avisappadminBundle:Caluga:index.html.twig', array(
             'entities' => $entities,
             'deleteForms' => $deleteForms,
         ));
+        
+            }else{
+                
+                
+                $entities = 0;
+                 $deleteForms = 0;
+                 return $this->render('avisappadminBundle:Caluga:index.html.twig', array(
+            'entities' => $entities,
+            'deleteForms' => $deleteForms,
+        ));
+                
+                
+            }
     }
     /**
      * Creates a new Caluga entity.

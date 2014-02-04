@@ -24,15 +24,34 @@ class SliderController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('avisappadminBundle:Slider')->findAll();
-        
+       
+        $cont = 0 ;
         foreach ($entities as $entity) {
+            $cont++;
             $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
         }
+        
+        
+        if($cont > 0 ){
 
         return $this->render('avisappadminBundle:Slider:index.html.twig', array(
             'entities' => $entities,
             'deleteForms' => $deleteForms,
         ));
+        
+        }else{
+            
+            $entities = 0;
+            $deleteForms = 0;
+            
+            
+            
+        return $this->render('avisappadminBundle:Slider:index.html.twig', array(
+            'entities' => $entities,
+            'deleteForms' => $deleteForms,
+        ));
+        }
+        
     }
     /**
      * Creates a new Slider entity.
