@@ -25,8 +25,13 @@ class TextoQueesController extends Controller
 
         $entities = $em->getRepository('avisappadminBundle:TextoQuees')->findAll();
 
+        foreach ($entities as $entity) {
+            $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
+        }
+        
         return $this->render('avisappadminBundle:TextoQuees:index.html.twig', array(
             'entities' => $entities,
+            'deleteForms' => $deleteForms,
         ));
     }
     /**
@@ -67,7 +72,7 @@ class TextoQueesController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Crear'));
 
         return $form;
     }
@@ -146,7 +151,7 @@ class TextoQueesController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $form->add('submit', 'submit', array('label' => 'Editar'));
 
         return $form;
     }
@@ -216,7 +221,7 @@ class TextoQueesController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('admin_textoquees_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Eliminar', 'attr' => array('class' => 'btn  btn-danger')))
             ->getForm()
         ;
     }

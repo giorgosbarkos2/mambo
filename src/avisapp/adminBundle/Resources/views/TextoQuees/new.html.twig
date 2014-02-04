@@ -1,15 +1,24 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>TextoQuees creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('admin_textoquees') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Crear, Texto Que es? {% endblock%}
+{% block padre %}<a href="{{path('admin_textoquees')}}">Listar, Texto Que es?</a>{% endblock %}
+{% block hijo %} Crear, Texto Que es? {%endblock%}
+{% block titulo %} Crear, Texto Que es? {%endblock %}
+{% block contenido %}
+<div class="horizontal-form" rol="form">
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.texto, 'Texto Slider: ', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
+        <div class="col-sm-10">
+            {{ form_widget(form.texto, {'attr' : { 'class' : 'form-control'}})}}
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+             {{form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}})}} 
+        </div>
+        </div>
+    {{ form_end(form) }}
+</div>
 {% endblock %}
