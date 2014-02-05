@@ -1,0 +1,30 @@
+admin_textoqueesdos:
+    pattern:  /
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:index" }
+
+admin_textoqueesdos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:show" }
+
+admin_textoqueesdos_new:
+    pattern:  /new
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:new" }
+
+admin_textoqueesdos_create:
+    pattern:  /create
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:create" }
+    requirements: { _method: post }
+
+admin_textoqueesdos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:edit" }
+
+admin_textoqueesdos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:update" }
+    requirements: { _method: post|put }
+
+admin_textoqueesdos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "avisappadminBundle:Textoqueesdos:delete" }
+    requirements: { _method: post|delete }

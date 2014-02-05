@@ -37,4 +37,11 @@ avisappadminBundle_admin_calugabeneficio:
 avisappadminBundle_admin_botonhome:
         resource: "@avisappadminBundle/Resources/config/routing/botonhome.yml"
         prefix:   /admin/botonhome
+        
+avisappadminBundle_admin_textoqueesdos:
+        resource: "@avisappadminBundle/Resources/config/routing/textoqueesdos.yml"
+        prefix:   /admin/textoqueesdos
+
+        
+
 

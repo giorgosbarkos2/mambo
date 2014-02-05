@@ -1,0 +1,33 @@
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Listar, Texto Que es Dos? {% endblock%}
+{% block padre %}<a href="{{path('admin_textoqueesdos_new')}}">Crear Texto Que es Dos?</a>{% endblock %}
+{% block hijo %} Listar, Texto Que es Dos? {%endblock%}
+{% block titulo %} Listar, Texto Que es Dos? {%endblock %}
+{% block contenido %}
+
+    <table class="records_list">
+        <thead>
+            <tr>
+
+                <th>Descripcion</th>
+                <th>Eliminar</th>
+                <th>Editar</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.descripcion }}</td>
+                <td>
+                <form action="{{ path('admin_textoqueesdos_delete', { 'id': entity.id }) }}" method="post">
+                    <input type="hidden" name="_method" value="DELETE" />
+                        {{ form_widget(deleteForms[entity.id]) }}
+                </form>
+                </td>
+                <td><a href="{{ path('admin_textoqueesdos_edit', { 'id': entity.id }) }}" class="btn btn-primary">Editar</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
