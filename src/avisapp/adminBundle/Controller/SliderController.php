@@ -68,7 +68,7 @@ class SliderController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_slider_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('admin_slider'));
         }
 
         return $this->render('avisappadminBundle:Slider:new.html.twig', array(

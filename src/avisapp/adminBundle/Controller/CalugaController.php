@@ -69,7 +69,7 @@ class CalugaController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_caluga_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('admin_caluga'));
         }
 
         return $this->render('avisappadminBundle:Caluga:new.html.twig', array(
@@ -92,7 +92,7 @@ class CalugaController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Guardar Caluga'));
 
         return $form;
     }

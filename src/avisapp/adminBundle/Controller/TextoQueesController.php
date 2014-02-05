@@ -66,7 +66,7 @@ class TextoQueesController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_textoquees_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('admin_textoquees'));
         }
 
         return $this->render('avisappadminBundle:TextoQuees:new.html.twig', array(

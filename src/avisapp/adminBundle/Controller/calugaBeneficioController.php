@@ -64,7 +64,7 @@ class calugaBeneficioController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_calugabeneficio_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('admin_calugabeneficio'));
         }
 
         return $this->render('avisappadminBundle:calugaBeneficio:new.html.twig', array(

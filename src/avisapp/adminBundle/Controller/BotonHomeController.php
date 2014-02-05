@@ -71,7 +71,7 @@ class BotonHomeController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_botonhome_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('admin_botonhome'));
         }
 
         return $this->render('avisappadminBundle:BotonHome:new.html.twig', array(
