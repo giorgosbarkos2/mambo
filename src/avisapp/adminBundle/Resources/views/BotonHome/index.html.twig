@@ -1,0 +1,32 @@
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Listar Boton Home {% endblock%}
+{% block padre %}<a href="{{path('admin_botonhome_new')}}">Crear Boton Home</a>{% endblock %}
+{% block hijo %} Listar Boton Home {%endblock%}
+{% block titulo %} Listar Boton Home {%endblock %}
+{% block contenido %}
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Texto</th>
+            <th>Url</th>
+            <th>Eliminar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entity in entities %}
+        <tr>
+            <td>{{ entity.texto }}</td>
+            <td>{{ entity.url }}</td>
+            <td>
+                <form action="{{ path('admin_botonhome_delete', { 'id': entity.id }) }}" method="post">
+                    <input type="hidden" name="_method" value="DELETE" />
+                        {{ form_widget(deleteForms[entity.id]) }}
+                </form>
+            </td>
+            <td><a href="{{ path('admin_botonhome_edit', { 'id': entity.id }) }}" class="btn btn-primary">Editar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    {% endblock %}

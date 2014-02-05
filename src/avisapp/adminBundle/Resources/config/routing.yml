@@ -30,8 +30,11 @@ login:
    pattern:  /admin/login
    defaults: { _controller: avisappadminBundle:Default:login }
 
-  
-
 avisappadminBundle_admin_calugabeneficio:
         resource: "@avisappadminBundle/Resources/config/routing/calugabeneficio.yml"
         prefix:   /admin/calugabeneficio
+
+avisappadminBundle_admin_botonhome:
+        resource: "@avisappadminBundle/Resources/config/routing/botonhome.yml"
+        prefix:   /admin/botonhome
+

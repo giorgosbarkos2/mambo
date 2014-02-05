@@ -1,0 +1,32 @@
+{% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
+{% block title%} Crear Boton Home {% endblock%}
+{% block padre %}<a href="{{path('admin_botonhome')}}">Listar Boton Home</a>{% endblock %}
+{% block hijo %} Crear Boton Home {%endblock%}
+{% block titulo %} Crear Boton Home {%endblock %}
+{% block contenido %}
+<div class="horizontal-form" rol="form">
+    {{ form_start(form) }}
+     <div class="form-group">
+        {{ form_label(form.texto, 'Ingrese un Texto:', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
+        <div class="col-sm-10">
+            {{ form_widget(form.texto, {'attr' : { 'class' : 'form-control'}})}}
+        </div>
+        </div>
+        <br />
+        <br />        
+        <div class="form-group">
+            {{form_label(form.url, 'Ingrese url del Boton:', {'label_attr': {'class': 'col-sm-2 control-label'}} ) }}
+            <div class="col-sm-10">
+                {{form_widget(form.url, {'attr': {'class' : 'form-control'}})}}
+            </div>
+        </div>
+        <br />
+        <br />        
+        <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+             {{form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}})}} 
+        </div>
+        </div>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

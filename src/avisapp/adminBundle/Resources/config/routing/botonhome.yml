@@ -1,0 +1,30 @@
+admin_botonhome:
+    pattern:  /
+    defaults: { _controller: "avisappadminBundle:BotonHome:index" }
+
+admin_botonhome_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "avisappadminBundle:BotonHome:show" }
+
+admin_botonhome_new:
+    pattern:  /new
+    defaults: { _controller: "avisappadminBundle:BotonHome:new" }
+
+admin_botonhome_create:
+    pattern:  /create
+    defaults: { _controller: "avisappadminBundle:BotonHome:create" }
+    requirements: { _method: post }
+
+admin_botonhome_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "avisappadminBundle:BotonHome:edit" }
+
+admin_botonhome_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "avisappadminBundle:BotonHome:update" }
+    requirements: { _method: post|put }
+
+admin_botonhome_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "avisappadminBundle:BotonHome:delete" }
+    requirements: { _method: post|delete }
