@@ -1,12 +1,12 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
-{% block title%} Editar Slider {% endblock%}
-{% block padre %}<a href="{{path('admin_slider')}}">Listar Slider</a>{% endblock %}
-{% block hijo %} Editar Slider {%endblock%}
-{% block titulo %} Editar Slider {%endblock %}
+{% block title%} Editar Carrusel Portada {% endblock%}
+{% block padre %}<a href="{{path('admin_slider')}}">Listar Carrusel Portada</a>{% endblock %}
+{% block hijo %} Editar Carrusel Portada {%endblock%}
+{% block titulo %} Editar Carrusel Portada {%endblock %}
 {% block contenido %}
     {{ form_start(edit_form)}}
     <div class="form-group">
-        {{form_label(edit_form.texto, 'Su Texto : ', {'label_attr': {'class': 'col-sm-2 control-label'}})}}
+        {{form_label(edit_form.texto, 'Texto (Máximo 20 caracteres con espacios.) ', {'label_attr': {'class': 'col-sm-2 control-label'}})}}
         <div class="col-sm-10">
             {{form_widget(edit_form.texto, {'attr': {'class': 'form-control'}})}}
         </div>
@@ -15,7 +15,7 @@
     <br />
         <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-             {{form_widget(edit_form.submit,{'label': 'Guardar Editar'}, {'attr': {'class': 'btn btn-primary'}})}}
+             {{form_widget(edit_form.submit,{'label': 'Editar'}, {'attr': {'class': 'btn btn-primary'}})}}
              
         </div>
     </div>

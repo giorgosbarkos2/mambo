@@ -1,17 +1,18 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
-{% block title%} Crear, Texto Que es? {% endblock%}
-{% block padre %}<a href="{{path('admin_textoquees')}}">Listar, Texto Que es?</a>{% endblock %}
-{% block hijo %} Crear, Texto Que es? {%endblock%}
-{% block titulo %} Crear, Texto Que es? {%endblock %}
+{% block title%} Crear, Propuesta de Valor. {% endblock%}
+{% block padre %}<a href="{{path('admin_textoquees')}}">Listar, Propuesta de Valor.</a>{% endblock %}
+{% block hijo %} Crear, Propuesta de Valor. {%endblock%}
+{% block titulo %} Crear, Propuesta de Valor. {%endblock %}
 {% block contenido %}
 <div class="horizontal-form" rol="form">
     {{ form_start(form) }}
     <div class="form-group">
-        {{ form_label(form.texto, 'Texto Slider: ', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
+        {{ form_label(form.texto, 'Propuesta de Valor: ', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
         <div class="col-sm-10">
             {{ form_widget(form.texto, {'attr' : { 'class' : 'form-control'}})}}
         </div>
     </div>
+    <br />
     <br />
     <br />
     <div class="form-group">

@@ -89,7 +89,7 @@ class TextoQueesController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Crear'));
+        $form->add('submit', 'submit', array('label' => 'Guardar'));
 
         return $form;
     }
@@ -168,7 +168,7 @@ class TextoQueesController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Editar'));
+        $form->add('submit', 'submit', array('label' => 'Editar', 'attr' => array('class' => 'btn btn-primary')));
 
         return $form;
     }

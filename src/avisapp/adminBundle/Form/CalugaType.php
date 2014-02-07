@@ -17,7 +17,6 @@ class CalugaType extends AbstractType
         $builder
             ->add('titulo')
             ->add('descripcion')
-            ->add('foto')
         ;
     }
     

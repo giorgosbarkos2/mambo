@@ -91,7 +91,7 @@ class SliderController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Crear', 'attr' => array('class' => 'btn  btn-primary')));
+        $form->add('submit', 'submit', array('label' => 'Guardar', 'attr' => array('class' => 'btn  btn-primary')));
 
         return $form;
     }
@@ -240,7 +240,7 @@ class SliderController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('admin_slider_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Eliminar Slider', 'attr' => array('class' => 'btn  btn-danger')))
+            ->add('submit', 'submit', array('label' => 'Eliminar', 'attr' => array('class' => 'btn  btn-danger')))
             ->getForm()
         ;
     }

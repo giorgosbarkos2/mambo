@@ -1,13 +1,13 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
-{% block title%} Agregar Slider {% endblock%}
-{% block padre %}<a href="{{path('admin_slider')}}">Listar Slider</a>{% endblock %}
-{% block hijo %} Agregar Slider {%endblock%}
-{% block titulo %} Agregar Slider {%endblock %}
+{% block title%} Agregar Carrusel Portada {% endblock%}
+{% block padre %}<a href="{{path('admin_slider')}}">Listar Carrusel Portada</a>{% endblock %}
+{% block hijo %} Agregar Carrusel Portada {%endblock%}
+{% block titulo %} Agregar Carrusel Portada {%endblock %}
 {% block contenido %}
 <div class="horizontal-form" rol="form">
     {{ form_start(form) }}
     <div class="form-group">
-        {{ form_label(form.texto, 'Texto Slider: ', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
+        {{ form_label(form.texto, 'Texto (Máximo 20 caracteres con espacios.):', {'label_attr': {'class' :' col-sm-2 control-label'} }) }}
         <div class="col-sm-10">
             {{ form_widget(form.texto, {'attr' : { 'class' : 'form-control'}})}}
         </div>

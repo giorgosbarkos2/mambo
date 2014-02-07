@@ -94,7 +94,7 @@ class BotonHomeController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Guardar Boton'));
+        $form->add('submit', 'submit', array('label' => 'Guardar'));
 
         return $form;
     }

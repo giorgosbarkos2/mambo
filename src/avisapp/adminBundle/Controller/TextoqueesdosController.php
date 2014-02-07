@@ -169,7 +169,7 @@ class TextoqueesdosController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Editar'));
+        $form->add('submit', 'submit', array('label' => 'Editar', 'attr' => array('class' => 'btn btn-primary')));
 
         return $form;
     }

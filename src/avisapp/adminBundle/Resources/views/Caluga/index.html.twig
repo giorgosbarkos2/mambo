@@ -1,15 +1,14 @@
 {% extends "avisappadminBundle:Layers:basePrincipal.html.twig" %}
-{% block title%} Listar Caluga {% endblock%}
-{% block padre %}<a href="{{path('admin_caluga_new')}}">Crear Caluga</a>{% endblock %}
-{% block hijo %} Listar Caluga {%endblock%}
-{% block titulo %} Listar Caluga {%endblock %}
+{% block title%} Listar, Paso a Paso {% endblock%}
+{% block padre %}<a href="{{path('admin_caluga_new')}}">Crear, Paso a Paso</a>{% endblock %}
+{% block hijo %} Listar, Paso a Paso {%endblock%}
+{% block titulo %} Listar, Paso a Paso {%endblock %}
 {% block contenido %}
     <table class="records_list">
         <thead>
             <tr>
-                <th>Titulo</th>
-                <th>Descripcion</th>
-                <th>Foto</th>
+                <th>Título</th>
+                <th>Descripción</th>
                 <th>Eliminar</th>
                 <th>Editar</th>
             </tr>
@@ -19,10 +18,6 @@
             <tr>
                 <td>{{ entity.titulo }}</td>
                 <td>{{ entity.descripcion }}</td>
-                <td>
-                    <img src="../../web/bundles/avisapppaginas/images/icons/{{ entity.foto }}" alt="">
-                
-                </td>
                 <td>
                     <form action="{{ path('admin_caluga_delete', { 'id': entity.id }) }}" method="post">
                         <input type="hidden" name="_method" value="DELETE" />
