@@ -142,12 +142,38 @@
         </div>					
         <div class="row">
             <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
-                                    {% for caluga in caluga %}
-                                        {# asset('bundles/avisapppaginas/images/icons/01.png') #}
-                <i class="fa fa-edit"><img src="../../avisapppaginas/images/icons/{{caluga.foto}}"></i>	
+               {% for caluga in caluga %}
+
+                {% if caluga.id == 1 %}
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/01.png')}}"></i>	
                 <h4>{{caluga.titulo}}</h4>
                 <p>{{caluga.descripcion}}</p>					
-                                     {% endfor %}   
+                </div>
+                
+                {% elseif caluga.id == 2 %} 
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/02.png')}}"></i>	
+                <h4>{{caluga.titulo}}</h4>
+                <p>{{caluga.descripcion}}</p>
+                </div>
+                
+                {% elseif caluga.id == 3 %} 
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/03.png')}}"></i>	
+                <h4>{{caluga.titulo}}</h4>
+                <p>{{caluga.descripcion}}</p>					
+                </div>
+                
+                {% elseif caluga.id ==  4%} 
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/04.png')}}"></i>	
+                <h4>{{caluga.titulo}}</h4>
+                <p>{{caluga.descripcion}}</p>
+                </div>
+                {%endif %}
+                
+               {% endfor %}   
             </div>
         </div>
     </div>
