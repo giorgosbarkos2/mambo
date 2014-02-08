@@ -4,7 +4,24 @@
 <div id="section1">
     <div class="top_wrapper">
         <div class="top">
-            <div class="wrapper">	
+            <div class="wrapper">
+
+            <div class="container text-right">
+                    <div class="row">
+
+                        <div class="col-md-12">     
+                            {% for botonhome in botonhome %}
+                            <a type="button" class="btn purchase_button" href="{{botonhome.url}}" target="_blank">{{botonhome.texto}}</a>
+                            <!--
+                            <button type="button" class="btn purchase_button" action="" target="_blank" ></button>
+                            -->
+                            {% endfor %}
+                        </div>
+
+                    </div> 
+
+                </div>
+
                 <div class="container text-center">
                     <div class="row">
                         <div class="col-md-12" data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:300}">
@@ -30,20 +47,7 @@
                     </div>
                 </div>
 
-                <div class="container text-center">
-                    <div class="row">
-
-                        <div class="col-md-12">		
-                            {% for botonhome in botonhome %}
-                            <a type="button" class="btn purchase_button" href="{{botonhome.url}}" target="_blank">{{botonhome.texto}}</a>
-                            <!--
-                            <button type="button" class="btn purchase_button" action="" target="_blank" ></button>
-                            -->
-                            {% endfor %}
-                        </div>
-
-                    </div>	
-                </div>
+                
             </div>							
         </div>
 
@@ -61,9 +65,9 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#welcome">Qué es?</a></li>
+                            <li><a href="#welcome">¿Qué es?</a></li>
                             <li><a href="#about">Paso a Paso</a></li>
-                            <li><a href="#service2">Beneficio</a></li>		
+                            <li><a href="#service2">Beneficios</a></li>		
                             <li><a href="#contact">Contacto</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -141,7 +145,6 @@
             </div>-->
         </div>					
         <div class="row">
-            <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
                {% for caluga in caluga %}
 
                 {% if caluga.id == 1 %}
@@ -152,21 +155,21 @@
                 </div>
                 
                 {% elseif caluga.id == 2 %} 
-                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}">
                 <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/02.png')}}"></i>	
                 <h4>{{caluga.titulo}}</h4>
                 <p>{{caluga.descripcion}}</p>
                 </div>
                 
                 {% elseif caluga.id == 3 %} 
-                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:600}">
                 <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/03.png')}}"></i>	
                 <h4>{{caluga.titulo}}</h4>
                 <p>{{caluga.descripcion}}</p>					
                 </div>
                 
                 {% elseif caluga.id ==  4%} 
-                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:200}">
+                <div class="col-md-3" data-uk-scrollspy="{cls:'uk-animation-fade', delay:800}">
                 <i class="fa fa-edit"><img src="{{asset('bundles/avisapppaginas/images/icons/04.png')}}"></i>	
                 <h4>{{caluga.titulo}}</h4>
                 <p>{{caluga.descripcion}}</p>
@@ -188,7 +191,7 @@
     <div class="container text-center">        	
         <div class="row">
             <div class="col-md-12 title" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true}">
-                <h2><span>BENEFICIOS</span> DE AVISAPP</h2>
+                <h2><span>BENEFICIOS</span> DE AVIS<span class="celeste">APP</span></h2>
             </div>
         </div>
 
@@ -273,7 +276,7 @@
                             <textarea name="Message" placeholder="Comentarios"></textarea>
                         </fieldset>
                         <fieldset>
-                            <input type="submit" value="Enviar!" class="button">									
+                            <input class="btn purchase_button" type="submit" value="Enviar!" class="button">									
                         </fieldset>
                     </div>
                 </form>							

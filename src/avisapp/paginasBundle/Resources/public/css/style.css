@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 p{
-    font-size: 14px;
+    font-size: 20px;
     line-height: 24px;
 	color:#979CA2;
 }
@@ -59,6 +59,10 @@ p{
 h1{
 	font-size:30px;
 	padding:20px 0;
+}
+
+h4 {
+    font-size: 24px !important;
 }
 
 .wrapper{
@@ -167,9 +171,9 @@ ul.bxslider{
 	border-radius:12px!important;		
 	/* border:2px solid #fff; */
 	float:none!important;
-	 -webkit-text-shadow: 2px 2px 2px #036;
--moz-text-shadow: 2px 2px 2px #036;
-text-shadow: 2px 2px 2px #036;
+	-webkit-text-shadow: 1px 1px 1px #003366;
+	-moz-text-shadow: 1px 1px 1px #003366;
+	text-shadow: 1px 1px 1px #003366;
 	
 	/*transition*/
 	-webkit-transition:all 0.3s ease 0s;
@@ -332,7 +336,7 @@ ul.nav{
 }
 
 .separator p{
-	color: #979CA2;
+	color: #FFFFFF;
     font-size: 24px;
 	letter-spacing: 1px;
     line-height: 30px;
@@ -490,7 +494,7 @@ ul.nav{
 
 #service2 .col-md-6:hover .icon_hover{
 	display:block;
-	background:#979CA2;			
+	background:#333333;			
 }
 
 .icon_hover h3{
@@ -838,14 +842,14 @@ input{
 	height: 48px;
     margin-top: 5px;
     padding: 12px 8px;
-    width: 70%;
+    width: 57%;
 	border-radius: 5px;
 }
 
 .contFrm textarea{
     margin-top: 5px;
     padding: 12px 8px;
-    width: 70%;
+    width: 57%;
 	color:#979CA2;
 	border:1px solid #979CA2;
 	height: 115px;
@@ -921,6 +925,8 @@ input{
 }
 
 
+
+
 /* Custom Media Query */
 
 @media screen and (max-width: 768px){
@@ -932,5 +938,24 @@ input{
 	.contFrm .text-left, .contFrm .text-right{
 		text-align:center;
 	}
+
+	.affix-top{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+	.logo{
+		display: none !important;
+		visibility: hidden !important;
+	}
+
+	.purchase_button{
+		margin-top: 50px !important;
+}
+
+.top h2 {
+    font-size: 22px;
+}
 
 }
