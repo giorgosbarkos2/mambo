@@ -22,4 +22,9 @@ class DefaultController extends Controller
         $botonhome = $em->getRepository('avisappadminBundle:BotonHome')->findAll();
         return $this->render('avisapppaginasBundle:Default:index.html.twig', array('slider' => $slider, 'caluga' => $caluga, 'textoquees'=>$textoquees, 'calugabeneficio' => $calugabeneficio, 'textoqueeesdos'=>$textoqueesdos, 'botonhome' =>$botonhome));
     }
+
+
+
+
+
 }
