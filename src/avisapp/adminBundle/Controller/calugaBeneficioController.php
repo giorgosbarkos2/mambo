@@ -191,14 +191,19 @@ class calugaBeneficioController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_calugabeneficio_edit', array('id' => $id)));
-        }
+            $entities = $em->getRepository('avisappadminBundle:calugaBeneficio')->findAll();
+            $cont = 0;
+            foreach ($entities as $entity) {
+                $cont++;
+                $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
+            }
+        
+            return $this->render('avisappadminBundle:calugaBeneficio:index.html.twig', array(
+                'entities' => $entities,
+                'deleteForms' => $deleteForms,
+            ));
 
-        return $this->render('avisappadminBundle:calugaBeneficio:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        }
     }
     /**
      * Deletes a calugaBeneficio entity.

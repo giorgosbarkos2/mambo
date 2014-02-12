@@ -197,15 +197,21 @@ class BotonHomeController extends Controller
 
         if ($editForm->isValid()) {
             $em->flush();
+        
+            $entities = $em->getRepository('avisappadminBundle:BotonHome')->findAll();
+            $cont = 0;
+        
+            foreach ($entities as $entity) {
+                $cont++;
+                $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
+            }
+        
+            return $this->render('avisappadminBundle:BotonHome:index.html.twig', array(
+                'entities' => $entities,
+                'deleteForms' => $deleteForms,
+            ));
 
-            return $this->redirect($this->generateUrl('admin_botonhome_edit', array('id' => $id)));
         }
-
-        return $this->render('avisappadminBundle:BotonHome:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
     }
     /**
      * Deletes a BotonHome entity.
