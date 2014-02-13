@@ -194,14 +194,19 @@ class TextoqueesdosController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('admin_textoqueesdos_edit', array('id' => $id)));
+            $entities = $em->getRepository('avisappadminBundle:Textoqueesdos')->findAll();
+            $cont = 0;
+            foreach ($entities as $entity) {
+                $cont++;
+                $deleteForms[$entity->getId()] = $this->createDeleteForm($entity->getId())->createView();
+            }
+        
+            return $this->render('avisappadminBundle:Textoqueesdos:index.html.twig', array(
+                'entities' => $entities,
+                'deleteForms' => $deleteForms,
+            ));
         }
 
-        return $this->render('avisappadminBundle:Textoqueesdos:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
     }
     /**
      * Deletes a Textoqueesdos entity.
