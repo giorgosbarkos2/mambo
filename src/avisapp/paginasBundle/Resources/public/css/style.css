@@ -186,6 +186,8 @@ ul.bxslider{
 	background:#444444;
 	text-decoration:none;
 	color:#fff;
+	display: block;
+	clear: both;
 }
 
 .white_button{
@@ -957,5 +959,22 @@ input{
 .top h2 {
     font-size: 22px;
 }
+
+.purchase_button{
+	float:left!important;
+	
+}
+
+.icon_hover {
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    padding: 40px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
 
 }
