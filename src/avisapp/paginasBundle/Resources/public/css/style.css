@@ -186,8 +186,6 @@ ul.bxslider{
 	background:#444444;
 	text-decoration:none;
 	color:#fff;
-	display: block;
-	clear: both;
 }
 
 .white_button{
@@ -960,10 +958,7 @@ input{
     font-size: 22px;
 }
 
-.purchase_button{
-	float:left!important;
-	
-}
+
 
 .icon_hover {
     border-radius: 6px;
@@ -975,6 +970,12 @@ input{
     left: 0;
     overflow: hidden;
 }
+
+.purchase_button{
+	width: auto !important;		
+}
+
+
 
 
 }
